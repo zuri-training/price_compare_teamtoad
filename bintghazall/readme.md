@@ -120,23 +120,23 @@ Any additional information goes here
 
 ## Authors
 
-- [@bintghazall(https://www.github.com/bintghazall)
+- [@bintghazall](https://www.github.com/bintghazall)
 
 ## Project Contributors 
 
-- [@aliu691(https://www.github.com/aliu691)
-- [@bintghazall(https://www.github.com/bintghazall)
-- [@Oyindamolajames(https://www.github.com/Oyindamolajames)
-- [@Joshua-oneshioagbe(https://www.github.com/Joshua-oneshioagbe)
-- [@Affy-art(https://www.github.com/Affy-art)
-- [@Amakaugwuanyi(https://www.github.com/Amakaugwuanyi)
-- [@IamNaeto(https://www.github.com/IamNaeto)
-- [@Fejiro-J(https://www.github.com/Fejiro-J)
-- [@Mercyozioma(https://www.github.com/Mercyozioma)
-- [@Ayoolajamiu(https://www.github.com/Ayoolajamiu)
-- [@NnadozieAmara(https://www.github.com/NnadozieAmara)
-- [@CynthiaKings(https://www.github.com/CynthiaKings)
-- [@Yemioladd(https://www.github.com/Yemioladd)
+- [@aliu691](https://www.github.com/aliu691)
+- [@bintghazall](https://www.github.com/bintghazall)
+- [@Oyindamolajames](https://www.github.com/Oyindamolajames)
+- [@Joshua-oneshioagbe](https://www.github.com/Joshua-oneshioagbe)
+- [@Affy-art](https://www.github.com/Affy-art)
+- [@Amakaugwuanyi](https://www.github.com/Amakaugwuanyi)
+- [@IamNaeto](https://www.github.com/IamNaeto)
+- [@Fejiro-J](https://www.github.com/Fejiro-J)
+- [@Mercyozioma](https://www.github.com/Mercyozioma)
+- [@Ayoolajamiu](https://www.github.com/Ayoolajamiu)
+- [@NnadozieAmara](https://www.github.com/NnadozieAmara)
+- [@CynthiaKings](https://www.github.com/CynthiaKings)
+- [@Yemioladd](https://www.github.com/Yemioladd)
 
 ## Badges
 
