@@ -137,6 +137,9 @@ Any additional information goes here
 - [@NnadozieAmara](https://www.github.com/NnadozieAmara)
 - [@CynthiaKings](https://www.github.com/CynthiaKings)
 - [@Yemioladd](https://www.github.com/Yemioladd)
+- [@Gudnuel](https://www.github.com/Gudnuel)
+- [@Only1SP](https://github.com/orgs/zuri-training/people/Only1SP)
+
 
 ## Badges
 
