@@ -26,7 +26,7 @@ This application helps shoppers or prospective shoppers(users) to find relevant 
 ####  3. Backend Development
          Python 
 ####  4. Deployment
-        Github.io  Netlify
+        Github
 
 
 ## How it works
