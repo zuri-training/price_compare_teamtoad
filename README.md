@@ -20,7 +20,7 @@ This application helps shoppers or prospective shoppers(users) to find relevant 
 
 #### The following tools/programming languages will be used in the each areas, respectively;
 ####  1. Project Design
-        figma  etc
+        figma 
 ####  2. Frontend Development
         HTML   CSS   BootStrap   JavaScript
 ####  3. Backend Development
@@ -112,56 +112,50 @@ The project is carried out in 4 progressive stages as stated below with their re
 
 ### Stage 1
 | Design sketch | 
-| :------------- |
+| :-------------: |
 | Data schema |
 | Mood board |
 
 ### Stage 2
-| loading...| 
-| :------------- |
-| loading...|
-| loading...|
+| Low-fi| 
+| :-------------: |
+| High-fi |
+| Project structure |
+| Base files |
 
 ### Stage 3
-| loading...| 
-| :------------- |
-| loading...|
-| loading...|
+| Final Design| 
+| :-------------: |
+| Authentication Module |
+| Actual Build |
 
 ### Stage 4
-| loading...| 
-| :------------- |
-| loading...|
-| loading...|
-
-
-## Appendix
-
-Any additional information goes here
+| Testing | 
+| :-------------: |
+| Hosting on Server |
+| Final Production presentation |
+| Final Production Documentation |
 
 
 ## Authors
 
-- [@bintghazall](https://www.github.com/bintghazall)
+
 
 ## Project Contributors 
 
-- [@aliu691](https://www.github.com/aliu691)
-- [@bintghazall](https://www.github.com/bintghazall)
-- [@Oyindamolajames](https://www.github.com/Oyindamolajames)
-- [@Joshua-oneshioagbe](https://www.github.com/Joshua-oneshioagbe)
-- [@Affy-art](https://www.github.com/Affy-art)
-- [@Amakaugwuanyi](https://www.github.com/Amakaugwuanyi)
-- [@IamNaeto](https://www.github.com/IamNaeto)
-- [@Fejiro-J](https://www.github.com/Fejiro-J)
-- [@Mercyozioma](https://www.github.com/Mercyozioma)
-- [@Ayoolajamiu](https://www.github.com/Ayoolajamiu)
-- [@NnadozieAmara](https://www.github.com/NnadozieAmara)
-- [@CynthiaKings](https://www.github.com/CynthiaKings)
-- [@Yemioladd](https://www.github.com/Yemioladd)
-- [@Gudnuel](https://www.github.com/Gudnuel)
-- [@Only1SP](https://github.com/orgs/zuri-training/people/Only1SP)
-
+- [@aliu691(https://www.github.com/aliu691)
+- [@bintghazall(https://www.github.com/bintghazall)
+- [@Oyindamolajames(https://www.github.com/Oyindamolajames)
+- [@Joshua-oneshioagbe(https://www.github.com/Joshua-oneshioagbe)
+- [@Affy-art(https://www.github.com/Affy-art)
+- [@Amakaugwuanyi(https://www.github.com/Amakaugwuanyi)
+- [@IamNaeto(https://www.github.com/IamNaeto)
+- [@Fejiro-J(https://www.github.com/Fejiro-J)
+- [@Mercyozioma(https://www.github.com/Mercyozioma)
+- [@Ayoolajamiu(https://www.github.com/Ayoolajamiu)
+- [@NnadozieAmara(https://www.github.com/NnadozieAmara)
+- [@CynthiaKings(https://www.github.com/CynthiaKings)
+- [@Yemioladd(https://www.github.com/Yemioladd)
 
 ## Badges
 
