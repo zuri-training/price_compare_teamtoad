@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # installed app
-    'look'
+    'look_app'
 ]
 
 
