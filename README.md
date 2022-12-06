@@ -24,9 +24,60 @@ This application helps shoppers or prospective shoppers(users) to find relevant 
 ####  2. Frontend Development
         HTML   CSS   BootStrap   JavaScript
 ####  3. Backend Development
-         Python 
-####  4. Deployment
+         Python3 Django
+####  4. version control
         Github
+
+## Project Files Structure
+
+           REPO
+            ├── README.md
+            ├── .gitignore => list of files that will not be pushed to github.
+            ├── venv => virtual environment folder, use for activate a virtual or controlled environment.
+            ├── requirements.txt => The dependencies we need to install with `pip3 install -r requirements.txt`
+            └── Django project => Main Project folder, contains all project codes, boiler plates and folders.
+                ├──App =>look
+                │   ├── __init__.py
+                │   ├──migration => Sub_folder to store database migrations
+                │   ├── static
+                │   │   ├── css
+                │   │   ├── img
+                │   │   └── js
+                │   │
+                │   ├── templates
+                │   │   ├── errors
+                │   │   ├── forms
+                │   │   ├── layouts
+                │   │   └── pages
+                │   │
+                │   ├── admin.py
+                │   ├── apps.py
+                │   ├── form.py => form to models 
+                │   ├── models.py
+                │   ├── tests.py
+                │   ├── urls.py
+                │   └── views.py
+                │
+                ├── django_project => Folder contains code to setup project
+                │   ├── __init__.py
+                │   ├── asgi.py
+                │   ├── settings.py
+                │   ├── urls.py
+                │   └── wsgi.py
+                │
+                ├──.env
+                └──manage.py
+                           
+
+## django Installation Steps :-
+       1. Install Python 3.10 Or Higher. (download and install globally)
+### open the folder contain the project, in your VScode terminal(or cmd)
+       2. Install all dependencies cmd -python -m pip install –-user -r requirements.txt.
+### cd into the project directory
+       3. Finally run cmd - python manage.py runserver.
+        N:B we are using Django version 4.1.3.
+
+
 
 
 ## How it works
@@ -52,9 +103,6 @@ These are registered or authenticated users they have full access to the applica
 When and If an authenticated user found a product with their prefered price, he/she have a link below the product of interest that redirects he/she to vendor's platform to complete his/her order.
 
 They can also share the product they found on the page or result of their search with other people on social media or via email.
-
-
-
 
 
 
