@@ -20,7 +20,7 @@ This application helps shoppers or prospective shoppers(users) to find relevant 
 
 #### The following tools/programming languages will be used in the each areas, respectively;
 ####  1. Project Design
-        figma  etc
+        figma 
 ####  2. Frontend Development
         HTML   CSS   BootStrap   JavaScript
 ####  3. Backend Development
