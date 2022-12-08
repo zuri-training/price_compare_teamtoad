@@ -1,11 +1,40 @@
-{% extends "../layouts/base.html" %}
-{% load static %}
-{% block content %}
-   <h1>LOGIN</h1>
-
-   
-{% endblock %}
-
-{% block styles %}
-    <link rel="stylesheet" href={% static "css/login.css" %}>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullscreen responsive login page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="IMG-20221206-WA0018.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Login</h2>
+                <form>
+                   
+                    <div class="inputBx">
+                        <span>Email</span>
+                        <input type="email" name="" placeholder="Enter Email" required>
+                    </div>
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="password" name="" placeholder="Enter password" required>
+                    </div>
+                   
+                    <div class="inputBx">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="inputBx">
+                      <p>Don't have an account yet? Sign up<a href="signup.html"> here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
