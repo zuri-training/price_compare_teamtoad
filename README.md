@@ -7,6 +7,9 @@ This application allow users to search for a product and presents the user with 
 
 This application helps shoppers or prospective shoppers(users) to find relevant deals and compare prices accross a variety of major retailers or vendor of a product.
 
+## Live Project Link
+(http://look.pythonanywhere.com/)
+
 
 ### Project layout
 
