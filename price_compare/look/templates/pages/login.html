@@ -1,40 +1,40 @@
 {% extends "../layouts/base.html" %}
 {% load static %}
 {% block content %}
-<section>
-    <div class="imgBx">
-        <img src="IMG-20221206-WA0018.jpg">
-    </div>
-    <div class="contentBx">
-        <div class="formBx">
-            <h2>Login</h2>
-            <form method ="post" action="">
-            {% csrf_token %}
-                <div class="inputBx">
-                    <!-- <span>Email</span>
-                    <input type="email" name="" placeholder="Enter Email" required> -->
-                    <label for="username">username</label>
-                    <input type="text" name="username" placeholder="username">
-                </div>
-                <div class="inputBx">
-                    <!-- <span>Password</span>
-                    <input type="password" name="" placeholder="Enter password" required> -->
-                    <label for="password">password</label>
-                    <input type="password" name="password" placeholder="password">
-                </div>
-                {% for message in messages %}
-                    <span>{{message}}</span>
-                {% endfor %}
-                <div class="inputBx">
-                    <input type="submit" value="Login">
-                </div>
-                <div class="inputBx">
-                  <p>Don't have an account yet? Sign up<a href={% url "signup" %}> here</a></p>
-                </div>
-            </form>
+    <section>
+        <div class="imgBx">
+            <img src={% static "img/IMG-20221206-WA0018.jpg" %} alt="...">
         </div>
-    </div>
-</section>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Login</h2>
+                <form method ="post" action="">
+                {% csrf_token %}
+                    <div class="inputBx">
+                        <!-- <span>Email</span>
+                        <input type="email" name="" placeholder="Enter Email" required> -->
+                        <label for="username">username</label>
+                        <input type="text" name="username" placeholder="username">
+                    </div>
+                    <div class="inputBx">
+                        <!-- <span>Password</span>
+                        <input type="password" name="" placeholder="Enter password" required> -->
+                        <label for="password">password</label>
+                        <input type="password" name="password" placeholder="password">
+                    </div>
+                    {% for message in messages %}
+                        <span>{{message}}</span>
+                    {% endfor %}
+                    <div class="inputBx">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="inputBx">
+                    <p>Don't have an account yet? Sign up<a href={% url "signup" %}> here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% block styles %}

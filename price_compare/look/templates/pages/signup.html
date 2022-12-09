@@ -2,55 +2,55 @@
 {% extends "../layouts/base.html" %}
 {% load static %}
 {% block content %}
-<section>
-    <div class="imgBx">
-        <img src="IMG-20221206-WA0018.jpg">
-    </div>
-    <div class="contentBx">
-        <div class="formBx">
-            <h2>Sign up</h2>
-            <form  method ="post" action="" >
-            {% csrf_token %}
-                <div class="inputBx">
-                    <!-- <span>First name</span>
-                    <input type="text" name="" placeholder="Enter name" required> -->
-                    {{form.username.label}}
-                    {{form.username}}
-                </div>
-                <div class="inputBx">
-                    {{form.firstname.label}}
-                    {{form.firstname}
-                    <!-- <span>Last name</span>
-                    <input type="text" name="" placeholder="Enter name" required> -->
-                </div>
-                <div class="inputBx">
-                    {{form.email.label}}
-                    {{form.email}}
-                    <!-- <span>Email</span>
-                    <input type="email" name="" placeholder="Enter Email" required> -->
-                </div>
-                <div class="inputBx">
-                    {{form.password1.label}}
-                    {{form.password1}}
-                    <!-- <span>Password</span>
-                    <input type="password" name="" placeholder="Enter password" required> -->
-                </div>
-                <div class="inputBx">
-                    {{form.password2.label}}
-                    {{form.password2}}
-                    <!-- <span>comfirm password</span>
-                    <input type="password" name="" placeholder="Enter password" required> -->
-                </div>
-                <div class="inputBx">
-                    <input type="submit" value="Sign up">
-                </div>
-                <div class="inputBx">
-                  <p>Already have an account? Login <a href={% url "login" %}>here</a></p>
-                </div>
-            </form>
+    <section>
+        <div class="imgBx">
+            <img src={% static "img/IMG-20221206-WA0018.jpg" %}  alt="...">
         </div>
-    </div>
-</section>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Sign up</h2>
+                <form  method ="post" action="" >
+                {% csrf_token %}
+                    <div class="inputBx">
+                        <!-- <span>First name</span>
+                        <input type="text" name="" placeholder="Enter name" required> -->
+                        {{form.username.label}}
+                        {{form.username}}
+                    </div>
+                    <div class="inputBx">
+                        {{form.firstname.label}}
+                        {{form.firstname}
+                        <!-- <span>Last name</span>
+                        <input type="text" name="" placeholder="Enter name" required> -->
+                    </div>
+                    <div class="inputBx">
+                        {{form.email.label}}
+                        {{form.email}}
+                        <!-- <span>Email</span>
+                        <input type="email" name="" placeholder="Enter Email" required> -->
+                    </div>
+                    <div class="inputBx">
+                        {{form.password1.label}}
+                        {{form.password1}}
+                        <!-- <span>Password</span>
+                        <input type="password" name="" placeholder="Enter password" required> -->
+                    </div>
+                    <div class="inputBx">
+                        {{form.password2.label}}
+                        {{form.password2}}
+                        <!-- <span>comfirm password</span>
+                        <input type="password" name="" placeholder="Enter password" required> -->
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Sign up">
+                    </div>
+                    <div class="inputBx">
+                    <p>Already have an account? Login <a href={% url "login" %}>here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 {% block styles %}
     <link rel="stylesheet" href={% static "css/signup.css" %}>
