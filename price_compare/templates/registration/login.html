@@ -22,14 +22,18 @@
                         <label for="password">password</label>
                         <input type="password" name="password" placeholder="password">
                     </div>
+                    {{form.errors}}
                     {% for message in messages %}
                         <span>{{message}}</span>
-                    {% endfor %}
+                    {% endfor %} 
                     <div class="inputBx">
                         <input type="submit" value="Login">
                     </div>
                     <div class="inputBx">
-                    <p>Don't have an account yet? Sign up<a href={% url "signup" %}> here</a></p>
+                        <p><a href="/reset_password">forgot password?</a></p>
+                    </div>
+                    <div class="inputBx">
+                        <p>Don't have an account? <a href="/signup"> Sign up</a></p>
                     </div>
                 </form>
             </div>
