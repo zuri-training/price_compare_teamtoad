@@ -10,4 +10,4 @@ class CreateUserForm(UserCreationForm):
     class Meta:
         pass
         model = UserPlus
-        fields = ["username","email","password1","password2"]
+        fields = ["first_name","username","email","password1","password2"]

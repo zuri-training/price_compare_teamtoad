@@ -8,7 +8,7 @@
         </div>
         <div class="contentBx">
             <div class="formBx">
-                <h2>Sign up</h2>
+                <h2 class="mobile-no">Sign up</h2>
                 <form  method ="post" action="" >
                 {% csrf_token %}
                     <div class="inputBx">
@@ -18,8 +18,8 @@
                         {{form.username}}
                     </div>
                     <div class="inputBx">
-                        {{form.firstname.label}}
-                        {{form.firstname}
+                        {{form.first_name.label}}
+                        {{form.first_name}}
                         <!-- <span>Last name</span>
                         <input type="text" name="" placeholder="Enter name" required> -->
                     </div>
