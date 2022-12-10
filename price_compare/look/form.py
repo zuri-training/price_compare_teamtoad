@@ -11,3 +11,4 @@ class CreateUserForm(UserCreationForm):
         pass
         model = UserPlus
         fields = ["first_name","username","email","password1","password2"]
+
