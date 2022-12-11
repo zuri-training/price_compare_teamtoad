@@ -149,6 +149,7 @@ The project is carried out in 4 progressive stages as stated below with their re
 
 - [@aliu691(https://www.github.com/aliu691)
 - [@bintghazall(https://www.github.com/bintghazall)
+- [@Gudnuel(https://github.com/Gudnuel)
 - [@Oyindamolajames(https://www.github.com/Oyindamolajames)
 - [@Joshua-oneshioagbe(https://www.github.com/Joshua-oneshioagbe)
 - [@Affy-art(https://www.github.com/Affy-art)
