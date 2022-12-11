@@ -12,34 +12,24 @@
                 <form  method ="post" action="" >
                 {% csrf_token %}
                     <div class="inputBx">
-                        <!-- <span>First name</span>
-                        <input type="text" name="" placeholder="Enter name" required> -->
                         {{form.username.label}}
                         {{form.username}}
                     </div>
                     <div class="inputBx">
                         {{form.first_name.label}}
                         {{form.first_name}}
-                        <!-- <span>Last name</span>
-                        <input type="text" name="" placeholder="Enter name" required> -->
                     </div>
                     <div class="inputBx">
                         {{form.email.label}}
                         {{form.email}}
-                        <!-- <span>Email</span>
-                        <input type="email" name="" placeholder="Enter Email" required> -->
                     </div>
                     <div class="inputBx">
                         {{form.password1.label}}
                         {{form.password1}}
-                        <!-- <span>Password</span>
-                        <input type="password" name="" placeholder="Enter password" required> -->
                     </div>
                     <div class="inputBx">
                         {{form.password2.label}}
                         {{form.password2}}
-                        <!-- <span>comfirm password</span>
-                        <input type="password" name="" placeholder="Enter password" required> -->
                     </div>
                     <div class="inputBx">
                         <input type="submit" value="Sign up">

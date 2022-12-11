@@ -102,6 +102,7 @@ section .contentBx .formBx .inputBx input[type="submit"]:hover{
 
 section .contentBx .formBx .inputBx p{
     opacity: 50%;
+    text-align: center;
 }
 
 section .contentBx .formBx .inputBx p a{
@@ -109,6 +110,7 @@ section .contentBx .formBx .inputBx p a{
     color:  #0197f6;
     opacity: 200%;
     font-weight: 700;
+    
     text-decoration: none;
 }
 

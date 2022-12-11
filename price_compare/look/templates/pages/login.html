@@ -7,18 +7,14 @@
         </div>
         <div class="contentBx">
             <div class="formBx">
-                <h2 class="mobile-no">Login</h2>
+                <h2 class="mobile-no">Log in</h2>
                 <form method ="post" action="">
                 {% csrf_token %}
                     <div class="inputBx">
-                        <!-- <span>Email</span>
-                        <input type="email" name="" placeholder="Enter Email" required> -->
                         <label for="username">username</label>
                         <input type="text" name="username" placeholder="username">
                     </div>
                     <div class="inputBx">
-                        <!-- <span>Password</span>
-                        <input type="password" name="" placeholder="Enter password" required> -->
                         <label for="password">password</label>
                         <input type="password" name="password" placeholder="password">
                     </div>
@@ -30,10 +26,7 @@
                         <input type="submit" value="Login">
                     </div>
                     <div class="inputBx">
-                        <p><a href="/reset_password">forgot password?</a></p>
-                    </div>
-                    <div class="inputBx">
-                        <p>Don't have an account? <a href="/signup"> Sign up</a></p>
+                        <p>Don't have an account? <a href={% url "signup" %}> Sign up</a></p>
                     </div>
                 </form>
             </div>
