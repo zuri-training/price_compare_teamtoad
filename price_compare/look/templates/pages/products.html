@@ -5,12 +5,134 @@
 
 
 {% block content %}
-   <h1>PRODUCT under Construction</h1>
+    <nav>
+        <div>
+            <img src={% static "img/logoBlack.png" %} class="logo" alt="logo">
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href={% url "home" %}>Home</a>
+            <a href={% url "products" %}>Products</a>
+            <a href={% url "about" %}>About</a>
+            <a href="#contact">Contact</a>
+            <a href={% url "docs" %}>Docs</a>
+         {% if user.is_authenticated %}
+            <a href={% url "logout" %}>LogOut</a>
+         {% else %}
+            <a href={% url 'login' %}>LogIn</a>
+         {% endif %}
+        </div>
+        <div class="user-salute">
+            {% if user.is_authenticated %}
+                <p>
+                  Hi {{ user.username }}!
+                </p> 
+            {% else %}
+                <p>You are not logged in</p>
+            {% endif %}
+        </div>
+        <div class="hamburger-menu">
+            <div class="ham-bar bar-top"></div>
+            <div class="ham-bar bar-mid"></div>
+            <div class="ham-bar bar-bottom"></div>
+        </div>
+        <div class="navbar-user">
+        {% if user.is_authenticated %}
+           <p>
+                Hi {{ user.username }}!
+           </p> 
+        {% else %}
+            <p>You are not logged in</p>
+        {% endif %}
+        </div>
+    </nav>
 
 
+    <!-- product display -->
+    <section class="product">
+        <h3 class="head-word">Available Products</h3>
+        <div class="product-container">
+            <div class="card" id="beats">
+                <img src={% static "img/headphone2.jpg" %} alt="product picture">
+                <div class="text">
+                    <h3>Beats Headset</h3>
+                    <p>The 2022 beats by dre collab with 50 cent, the G-unit themed one of a kind headset, in the running for best..</p>
+                </div>
+                <div class="btn_holder">
+                    <a href={% url "productDetail" %} class="btn">
+                        view details
+                   </a> 
+                 </div>
+            </div>
 
+            <div class="card">
+                <img src={% static "img/landphone.jpg" %} alt="product picture">
+                <div class="text">
+                    <h3>Retro Spin Dial Phone</h3>
+                    <p>One for the timeless nostalgic feeling of a rotary dial, works as a modern intercomjustnwith the touch of..</p>                  
+                </div>
+                <div class="btn_holder">
+                   <a href={% url "login" %} class="btn">
+                        Log in or sign up to view details
+                   </a> 
+                </div>
+            </div>
 
+            <div class="card">
+                <img src={% static "img/pacman.jpg" %} alt="product picture">
+                <div class="text">
+                    <h3>PacMan Gameboy</h3>
+                    <p>A mod for PacMan, for the rans of arcade and portable gaming, one of the bet gifts out there..</p>                   
+                </div>
+                <div class="btn_holder">
+                    <a href={% url "login" %} class="btn">
+                         Log in or sign up to view details
+                    </a> 
+                 </div>
+            </div>
 
+            <div class="card">
+                <img src={% static "img/headphone.jpg" %} alt="product picture">
+                <div class="text">
+                    <h3>Sony MK-III's</h3>
+                    <p>With the advent of the Sony MK-IV's one would think the previeous generation would be killed but its still going..</p>                                   
+                </div>
+                <div class="btn_holder">
+                    <a href={% url "login" %} class="btn">
+                         Log in or sign up to view details
+                    </a> 
+                 </div>
+            </div>
+
+            <div class="card">
+                <img src={% static "img/iphone.jpg" %} alt="product picture">                
+                <div class="text">
+                <h3>Mag-Safe Pouch</h3>
+                <p>Mag-Safe Pouch for Apple airpods, airpods pro. A pocket size..</p>                  
+                </div>
+                <div class="btn_holder">
+                    <a href={% url "login" %} class="btn">
+                         Log in or sign up to view details
+                    </a> 
+                 </div>
+            </div>
+
+            <div class="card">
+                <img src={% static "img/google nest.jpg" %} alt="product picture">
+                <div class="text">
+                    <h3>Google Nest</h3>
+                    <p>Google Nest Speaker for your google home connectivity, Alexa integrated coming soon..</p>                   
+                </div>
+                <div class="btn_holder">
+                   <a href={% url "login" %} class="btn">
+                        Log in or sign up to view details
+                   </a> 
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <script src={% static 'js/index.js' %}></script>
 {% endblock %}
 
 
@@ -19,125 +141,8 @@
 
 {% block styles %}
     <link rel="stylesheet" href={% static "css/products.css" %}>
-{% endblock %}<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/products.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/255033cb2c.js" crossorigin="anonymous"></script>
     <title>Products</title>
-</head>
-<body>
-
-    <section class="header-container">
-        <header>
-            <div class="logo">
-                <img src="/images/logo.jpg"  alt="logo">
-            </div>
-
-            <div class="menu">
-                
-                <nav class="nav_list" id="nav_list">                  
-                    <a href="/index.html">Home</a>
-                    <a href="#">Products</a>
-                    <a href="About.html">About</a>
-                    <a href="#contact">contact</a>
-                    <a href="Docs.html">Docs</a>
-                </nav>  
-                  
-                
-            </div>
-            <div class="profile">
-                <!-- <i class="fa-light fa-user"></i> -->
-                <i class="fa fa-user" aria-hidden="true"></i>
-            </div>
-            <div class="hamburger">
-                <i class="fa-solid fa-bars fa-2x"></i>
-                <i class="fa-solid fa-x  fa-2x"></i>
-            </div>
-
-            
-        </header>
-    </section>
-    
-    <!-- product display -->
-    <section class="product">
-        <h3>Available Products</h3>
-        <div class="product-container">
-            <div class="card" id="beats">
-                <img src="/images/headphone2.jpg" alt="product picture">
-                
-                <div class="text">
-                    <h3>Beats Headset</h3>
-                    <p>The 2022 beats by dre collab with 50 cent, the G-unit themed one of a kind headset, in the running for best..</p>
-                    <button class="btn" data-view="headset">view</button>
-                    <button class="btn" data-purchase="headset">Purchase</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/images/landphone.jpg" alt="product picture">
-                <div class="text">
-                    <h3>Retro Spin Dial Phone</h3>
-                    <p>One for the timeless nostalgic feeling of a rotary dial, works as a modern intercomjustnwith the touch of..</p>
-                    <button class="btn" data-view="retro">view</button>
-                    <button class="btn" data-purchase="retro">Purchase</button>                    
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/images/pacman.jpg" alt="product picture">
-                <div class="text">
-                    <h3>PacMan Gameboy</h3>
-                    <p>A mod for PacMan, for the rans of arcade and portable gaming, one of the bet gifts out there..</p>
-                    <button class="btn" data-view="gameboy">view</button>
-                    <button class="btn" data-purchase="gameboy">Purchase</button>                    
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/images/headphone.jpg" alt="product picture">
-                <div class="text">
-                    <h3>Sony MK-III's</h3>
-                    <p>With the advent of the Sony MK-IV's one would think the previeous generation would be killed but its still going..</p>                
-                    <button class="btn" data-view="sony">view</button>
-                    <button class="btn" data-purchase="sony">Purchase</button>                    
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/images/iphone.jpg" alt="product picture">                
-                <div class="text">
-                <h3>Mag-Safe Pouch</h3>
-                <p>Mag-Safe Pouch for Apple airpods, airpods pro. A pocket size..</p>
-                    <button class="btn" data-view="pouch">view</button>
-                    <button class="btn" data-purchase="pouch">Purchase</button>                    
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/images/google nest.jpg" alt="product picture">
-                <div class="text">
-                    <h3>Google Nest</h3>
-                    <p>Google Nest Speaker for your google home connectivity, Alexa integrated coming soon..</p>
-                    <button class="btn" data-view="gNest">view</button>
-                    <button class="btn" data-purchase="gNest">Purchase</button>                    
-                </div>
-            </div>
-
-            <!-- anchor arrow -->
-            <div class="direction">                
-                <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i>
-            </div>
-        </div>
-    </section>
-
-    <script src="/js/product.js"></script>
-    <script src="/js/main.js"></script>
-</body>
-</html>
+{% endblock %}
