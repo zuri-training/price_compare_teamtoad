@@ -43,9 +43,14 @@ nav {
   color: #56baf9;
 }
 
+.navbar-user p{
+  color: #fff;
+  font-size: 20px;
+}
+
 /* intro section styling */
 .intro {
-  background-image: url(img/bg.png);
+  background-image: url("/static/img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500%;
@@ -494,7 +499,7 @@ footer p {
 
   /* intro section styling */
   .intro {
-    background-image: url(img/bg-mobile.png);
+    background-image: url("/static/img/bg-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 500%;
