@@ -2,8 +2,6 @@ from django.contrib import admin
 from django.urls import path
 from .views import *
 
-# app_name = "look"
-
 urlpatterns = [
     path('', Index, name="home" ),
     path('login/', LogIn, name="login"),
@@ -12,5 +10,6 @@ urlpatterns = [
     path('products/', Products, name="products"),
     path('productDetail/', ProductDetail, name="productDetail"),
     path('about/', About, name="about"),
-    path('docs/', Documentation, name="docs"),
+    path('docs/', Documentation, name="docs")
+    
 ]

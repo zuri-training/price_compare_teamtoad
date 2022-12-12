@@ -1,7 +1,5 @@
 from django.shortcuts import render,redirect
-from django.urls import reverse
 from django.contrib.auth import authenticate,login,logout
-# from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -11,7 +9,7 @@ from .models import *
 
 def SignUp(request):
     if request.user.is_authenticated:
-        return reverse(redirect('look:home'))
+        return redirect('home')
     else:
         form = CreateUserForm()
         if request.method == "POST":
@@ -28,7 +26,7 @@ def SignUp(request):
 #     return render(request, "pages/signup.html")
 def LogIn(request):
     if request.user.is_authenticated:
-        return redirect(reverse('look:home'))
+        return redirect('home')
     else:
         if request.method == "POST":
             username=request.POST.get('username')
@@ -36,7 +34,7 @@ def LogIn(request):
             user=authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect(reverse('look:home'))
+                return redirect('home')
             else:
                 messages.info(request, "username or password is incorrect")
         context={}
@@ -44,7 +42,7 @@ def LogIn(request):
 
 def LogoutUser(request):
     logout(request)
-    return render(request)
+    return redirect('login')
 
 
 def Index(request):
