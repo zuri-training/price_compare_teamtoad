@@ -1,17 +1,223 @@
+:root{
+    --primary-color:  #014C7B;
+    --secondary-color: #8F1929;
+    --tertiary-color: #2C3F4E;
+    --dark-color:#002240;
+    --light-primary: #56BAF9;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    background-color: #F7F7F7;
+    font-family: 'poppins';
 }
- 
-body {
-    background-color: aquamarine;
+body{
+    width: 100vw;
+}
+/* header starts */
+
+.header-container{
+    padding: 0 1.5rem;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 35vw;
+}
+.menu, .menu nav{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+.profile i{
+    border: 1px solid #726e6e;
+    border-radius: 50%;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.801);
 }
 
-h1 {
+.profile{
+    display: flex;
+    align-items: center;
+    width: 10vw;        
+}
+.logo img{
+    width: 90px;
+}
+header a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu, .profile{
+    
+    align-items: center;
+}
+
+
+nav a:hover{
+    border-bottom: 2px solid purple;
+}
+nav a:active{
     color: red;
 }
 
+/* hamburger */
+.hamburger{
+    display: none;
+}
 
+/* product card begins */
+.product{
+    padding: 0 10vw;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10vw;
+    padding: 5vh 0;
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;        
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
+    width: 410px;
+    height: 450px;    
+}
+.card img{
+    width: 410px;
+    height: 250px;
+}
+.text{padding: 0 1rem;}
+.btn{
+    background-color: var(--light-primary);
+    color: #fff;
+    border-radius: 5px;
+    padding: .8rem 1rem;
+    border: none;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+/* directional arrows */
+.direction{
+    position: relative;
+    bottom: 1rem;
+    left: 54vw;
+}
+.direction i{
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    background-color: var(--light-primary);    
+    padding: 1rem;
+    margin-left: 2.5rem;
+}
 
+.hamber{        
+    animation: mine;
+    animation-duration: 0.02s;
+}
+.clos{
+    animation: mines;
+    animation-duration: 0.02s;
+}
 
+@keyframes mine{
+    0% {transform: rotate(15deg);}
+    25% {transform: rotate(30deg);}
+    50% {transform: rotate(60deg);}
+    75% {transform: rotate(75deg);}
+    100% {transform: rotate(90deg);}
+}
+
+@keyframes mines{
+    0% {transform: rotate(-15deg);}
+    25% {transform: rotate(-30deg);}
+    50% {transform: rotate(-60deg);}
+    75% {transform: rotate(-75deg);}
+    100% {transform: rotate(-90deg);}
+}
+/* media queries */
+/* mobile */
+@media screen and (max-width: 393px) {
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .product{
+        padding: 0 10vw;
+    }
+    .card img{
+        width: 330px;}
+    .card{
+        width: 330px;
+        height: 450px; 
+        margin-bottom: 2rem;   
+    }
+    .hamburger .fa-x{
+        display: none;
+    }
+    .hamburger{
+        color: rgba(128, 128, 128, 0.801);
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        padding-left: 1.5rem;
+    }
+    .menu .nav_list{
+        display: none; 
+        /* display: flex; */
+        /* position: relative;*/
+        flex-direction: column; 
+        /* flex-wrap: nowrap; */
+        
+    }
+    .menu #nav_list a{
+        background: none;
+        line-height: 2.5;
+    }
+    
+    .menu #nav_list{
+       
+        position: fixed;
+        top: 7%;
+        left: 45%;
+        color: #f4f4f4;
+        padding: 0 1.5rem;
+        height: 40vh;
+        width: 20%;
+        transition: left 0.5s;
+        background: rgba(128, 128, 128, 0.801);
+        text-align: left;
+        z-index: 2;
+    }
+    .menu{
+        /* width: 65vw; */
+        justify-content: flex-end;
+    }
+    .logo img{
+        width: 70px;
+    }
+    .btn{
+        padding: .6rem .8rem;
+        border: none;
+        margin-right: 1rem;
+         
+    }
+  }
