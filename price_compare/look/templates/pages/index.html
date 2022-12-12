@@ -1,12 +1,6 @@
-
-{% extends "../layouts/base.html" %}
-
-
-
+{% extends "layouts/base.html" %}
 
 {% load static %}
-
-
 
 {% block content %}
     <nav>
@@ -20,10 +14,19 @@
             <a href="#contact">Contact</a>
             <a href={% url "docs" %}>Docs</a>
          {% if user.is_authenticated %}
-            <a href={% url "logout" %}>Log Out</a>
+            <a href={% url "logout" %}>LogOut</a>
          {% else %}
-            <a href={% url 'login' %}>Log In</a>
+            <a href={% url 'login' %}>LogIn</a>
          {% endif %}
+        </div>
+        <div class="user-salute">
+            {% if user.is_authenticated %}
+                <p>
+                  Hi {{ user.username }}!
+                </p> 
+            {% else %}
+                <p>You are not logged in</p>
+            {% endif %}
         </div>
         <div class="hamburger-menu">
             <div class="ham-bar bar-top"></div>
@@ -43,6 +46,7 @@
 
     <!-- Landing Intro Section -->
     <section class="intro">
+
         <h1>
             GET THE RIGHT GADGET WITH YOUR BUDGET
         </h1>
@@ -202,4 +206,4 @@
 {% block styles %}
     <link rel="stylesheet" href={% static "css/index.css" %}>
 {% endblock %}
->>>>>>> authentic module
+

@@ -58,6 +58,10 @@ nav {
   padding: 100px 100px;
 }
 
+.user-salute{
+  display: none;
+}
+
 h1 {
   font-style: normal;
   font-weight: 500;
@@ -405,10 +409,23 @@ footer p {
   .nav-links a {
     font-size: 20px;
   }
+  .user-salute{
+    display: block;
+  }
+
+  .user-salute p{
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .navbar-user{
+    display: none;
+  }
   /* intro section styling */
   .intro {
     padding: 30px 100px;
   }
+
   h1 {
     font-size: 40px;
     line-height: 40px;

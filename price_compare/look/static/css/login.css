@@ -34,13 +34,14 @@ section .imgBx img{
     top: 0;
     left: 0;
     width: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
+    height: inherit;
 }
 
 section .contentBx{
     display: flex;
     justify-content: center;
-    align-items: absolute;
+    align-items: center;
     width: 50%;
     height: 100%;
 }
@@ -101,11 +102,16 @@ section .contentBx .formBx .inputBx input[type="submit"]:hover{
 
 section .contentBx .formBx .inputBx p{
     opacity: 50%;
+    text-align: center;
 }
 
 section .contentBx .formBx .inputBx p a{
-    color:  black;
+    /* color:  black; */
+    color:  #0197f6;
     opacity: 200%;
+    font-weight: 700;
+    
+    text-decoration: none;
 }
 
 @media(max-width: 786px){
@@ -130,5 +136,8 @@ section .contentBx .formBx .inputBx p a{
 
     section .contentBx .formBx{
         width: 70%;
+    }
+    .mobile-no{
+        display: none !important;
     }
 }

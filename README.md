@@ -68,14 +68,18 @@ This application helps shoppers or prospective shoppers(users) to find relevant 
                 ├──.env
                 └──manage.py
                            
-
-## django Installation Steps :-
+# How to set up the project
+## Steps 1 :-
        1. Install Python 3.10 Or Higher. (download and install globally)
-### open the folder contain the project, in your VScode terminal(or cmd)
-       2. Install all dependencies cmd -python -m pip install –-user -r requirements.txt.
+## Steps 2 :-
+### *open the folder contain the project, in your VScode terminal(or cmd)
+       2. Install all dependencies cmd - py -m pip install -r requirements.txt.(windows)
+       2. Install all dependencies cmd - python3 -m pip install -r requirements.txt.(mac/Linux)
 ### cd into the project directory
-       3. Finally run cmd - python manage.py runserver.
-        N:B we are using Django version 4.1.3.
+       3. create a .env file for SECRET_KEY and DEBUG,paste their value..{their value are git ignored for security}
+       4. Finally run cmd - python manage.py runserver.
+
+        N:B we are using Django version 4.1.3 and these project can only be run,with a secret key available.
 
 
 
