@@ -1,10 +1,152 @@
-{% extends "../layouts/base.html" %}
-{% load static %}
-{% block content %}
-   <h1>docs</h1>
-  
-   
-{% endblock %}
-{% block styles %}
-    <link rel="stylesheet" href={% static "css/docs.css" %}>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Page</title>
+    <link rel="stylesheet" href="doc.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Nav Section -->
+    <nav>
+        <div>
+            <img src="img/logo-b&w.png" class="logo" alt="logo">
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href={% url "products" %}>Products</a>
+            <a href={% url "about" %}>About</a>
+            <a href={% url "contact" %}>Contact</a>
+            <a href={% url "doc.html" %}>Docs</a>
+        </div>
+        <div class="hamburger-menu">
+            <div class="ham-bar bar-top"></div>
+            <div class="ham-bar bar-mid"></div>
+            <div class="ham-bar bar-bottom"></div>
+        </div>
+    </nav>
+
+<!-- Side Bar Section -->
+<section>
+        <div class="left">
+            <div class="content">
+                <img src="img/home.png" alt=""><a href="#">Home</a>
+            </div>
+            <div class="content">
+                <img src="img/user guilds.png" alt=""><a href="#">Users Guilds</a>
+                <a href="#"><p>Core Prices</p></a>
+                <a href="#"><p>Price Compare Information</p></a>
+                <a href="#"><p>Concent Module</p></a>
+                <a href="#"><p>Onboarding</p></a>
+            </div>
+            <div class="content">
+                 <img src="img/standard.png" alt=""><a href="#">Standard</a>
+            </div>
+            <div class="content">
+                <img src="img/FAQs.png" alt=""><a href="#">FAQs</a>
+            </div>
+            <div class="content">
+                <img src="img/get-started.png" alt=""><a href="#">Get Started</a>
+            </div>
+            <div class="content">
+                <img src="img/support.png" alt=""><a href="#">Support</a>
+            </div>
+            <div class="content">
+                <img src="img/settings.png" alt=""><a href="#">Settings</a>
+            </div>
+            <div class="content">
+                <img src="img/upgrade.png" alt=""><a href="#">Upgrade</a>
+            </div>
+            <div class="content">
+                <img src="img/new-product.png" alt=""><a href="#">New Product</a>
+            </div>
+        </div>
+        <div class="top">
+                <div class="overview">
+                    <h1>Overview</h1>
+                    <p>Price compare is a platform that helps you to  compare prices of gadget (mobile phone) and accessories across multiple online shops and aids users make decisions on buying based on their budget.</p>
+                </div>
+                <div class="overview-img">
+                    <img src="img/overview1.png" alt="" class="overview-img1"> <img src="img/overview2.png" alt="" class="overview-img2"> <img src="img/overview3.png" alt="" class="overview-img3">
+                </div>
+        </div>
+
+
+        <!-- Users Guild Section -->
+        <div class="users-guild">
+            <h1>Users Guilds</h1>
+            <div class="container">
+                <div class="content-box">
+                    <img src="img/core-price.png" alt="">
+                    <h2>Core Price</h2>
+                    <h3> Check  core price and...</h3>
+                    <a href="#">Read more &RightArrow;</a>
+                </div>
+                <div class="content-box">
+                    <img src="img/price-compare.png" alt="">
+                    <h2>Price Compare</h2>
+                    <h3>Get vital price compare info..</h3>
+                    <a href="#">Read more &RightArrow;</a>
+                </div>
+                <div class="content-box">
+                      <img src="img/consent-module.png" alt="">
+                    <h2>Consent Module</h2>
+                    <h3>This application, allows you to....</h3>
+                    <a href="#">Read more &RightArrow;</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Frequently Asked Questions -->
+        <div class="faq">
+            <img src="img/big FAQs.png" alt="">
+            <h1>Frequently Asked Questions</h1>
+            <ul>
+                <li>How does this platform work?
+                    <p>Price compare is a platform that helps you to  compare prices of gadget (mobile phone) and accessories across multiple online shops and aids users make decisions on buying based on their budget.</p>
+                </li>
+                <li>Do i need to create an account first before using this platform?
+                    <p>If you want to have full access to this platform, you would have to create an account and automatically gives you access to leave comments.</p>
+                </li>
+                <li>What are other price options?
+                    <p>Price_compare has various price options which include buying a gadget option, a call gadget option, selling a gadget option etc.</p>
+                </li>
+                <li>How can i be onboarded to this patform?
+                    <p>Very simple, just click on the ‘’ get started’’ features and you are ready to go!</p>
+                </li>
+                <li>Why should i choose price compare?
+                    <p>With price compare platform, you get to get the right gadget with your budget!</p>
+                </li>
+                <li>Can i use any email?
+                    <p>Not just any email, use a verified and accessible G-mail account.</p>
+                </li>
+                <li>What is the new product on price compare platform?
+                    <p>Iphone 13</p>
+                </li>
+            </ul>
+            <a href="#"><Button class="herobtn">Sign In</Button></a><a href="#"><Button class="herobtn2">Get Started </Button></a>
+        </div>
+
+</section>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="nav-links">
+        <a href="index.html">Home</a> <span>|</span>
+        <a href={% url "products" %}>Products </a><span>|</span>
+        <a href={% url "about" %}>About</a><span>|</span>
+        <a href={% url "contact" %}>Contact</a><span>|</span>
+        <a href={% url "doc" %}>Docs</a>
+    </div>
+    <p>15662 Magodo Estate, Zuri Street, ZA 94103, Nigeria
+        © 2022 - Our Company, All rights reserved.</p>
+</footer>
+
+
+<script src="index.js"></script>
+</body>
+</html>
