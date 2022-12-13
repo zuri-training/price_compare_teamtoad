@@ -139,11 +139,7 @@ def ProductDetail (request,id, user_id):
                 comment=Comments(comments=comment_plus,customer_id=customers, product_id=duct)
                 comment.save()
                 messages.success(request, "comments successfully added")
-                time.sleep(2)
-                comment_plus = ""
-                messages.success(request, "")
-                return redirect("productDetail")
-
+        
     context={"data":duck, "comments":user_comments}
     return render(request, "pages/productDetail.html",context) 
 
