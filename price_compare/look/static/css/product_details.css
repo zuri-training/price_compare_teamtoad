@@ -2,12 +2,94 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    /* overflow: hidden; */
 }
- 
-body {
-    background-color: aquamarine;
+.productDetails{
+    display: flex;    
+    padding: 0 5%;
+    gap: 20%;
 }
 
-h1 {
-    color: red;
+.vendor-logo img{
+    width: 100px;
+    padding-left: 1.5rem;
+    mix-blend-mode: darken;
 }
+
+.vendor-logo{
+    width: 10%;
+    gap: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vendor{
+    display: flex;
+    width: 250px;
+    border: ipx solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-radius: 10px;
+    line-height: 1;
+    font-size: 0.8rem;
+}
+.related-product .card{
+    height: 200px;
+}
+/* .related-product button{ */
+button[data-logout]{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    left: 4rem;
+}
+button[data-comment]{
+    float: right;
+    padding: 0.5rem 3rem;
+    
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+}
+.related-product{
+    width: 20%;
+}
+.card-details img{
+    height: 65vh;
+}
+.productDetails-container .card-details, .productDetails-container img{
+    width: 100%;
+}
+.productDetails-container h3{
+    padding-bottom: 1rem;
+}
+.productDetails-container{    
+    width: 70%;
+}
+#comment{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+.user-comment h3{
+    padding-top: 1rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.801);
+}
+.user-comment li{
+    list-style-type: none;
+}
+
+.comment-item{
+    border-bottom: 1px solid  rgba(128, 128, 128, 0.801);
+    /* padding-top: 1rem; */
+    padding-bottom: 1rem;
+}
+.comment-head{
+    display: flex;
+    justify-content: space-between;    
+}
+.border-shadow{
+    /* height: 14vh; */
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.801);;
+}   
