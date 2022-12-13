@@ -22,14 +22,19 @@ body{
 }
 /* nav styling */
 nav {
+    position: fixed;
+    top: 0;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: var(--light-color);
     padding: 10px 50px;
     height: 100px;
     overflow: hidden;
+    border-bottom: 1px solid;
   }
+  
   .logo {
     height: 80px;
     width: 200px;
@@ -119,7 +124,7 @@ nav a:active{
 .head-word{
     font-size: 3rem;
     text-align: initial;
-    margin: 0 7%;
+    margin: 8% 7% 0%;
 }
 .product-container{
     display: flex;
@@ -133,6 +138,7 @@ nav a:active{
 .card{
     display: flex;
     flex-direction: column;
+    /* justify-content: space-evenly; */
     align-items: flex-start;
     padding: 0px;
     gap: 20px;        
@@ -140,7 +146,7 @@ nav a:active{
     width: 35%;
     height: 45vh;
     border-radius: 2%;
-    margin: 5%;   
+    margin: 3% 5%;  
 }
 
 .card img{
@@ -148,13 +154,17 @@ nav a:active{
     height: 250px;
     border-radius: 2%;
 }
-.text{padding: 0 1rem;}
+.text{
+    padding: 0 1rem;
+    height: 5.5rem;
+}
 .text h3{
     margin: 2% 0;
 }
 .text p{
     font-size: 13px;
     line-height: 18px;
+    /* height: 3rem; */
 }
 .btn_holder{
     width: 100%;
@@ -170,7 +180,7 @@ nav a:active{
     padding: 0.8rem 1rem;
     border: none;
     cursor: pointer;
-    width: 93%;
+    width: 95%;
     text-align: center;
     font-size: 18px;
     text-decoration: none;
@@ -321,7 +331,7 @@ nav a:active{
     .head-word{
         font-size: 1.5rem;
         text-align: initial;
-        margin: 0 10%;
+        margin: 23% 10% 0%;
     }
 
     .card{
@@ -332,6 +342,10 @@ nav a:active{
 
     .btn{
         font-size: 14px;
+    }
+    .text p{
+        font-size: 12px;
+        line-height: 15px;
     }
 
     /* .hamburger .fa-x{

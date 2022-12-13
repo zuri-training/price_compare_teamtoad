@@ -1,10 +1,103 @@
 {% extends "../layouts/base.html" %}
 {% load static %}
 {% block content %}
-   <h1>PRODUCT DETAIL under Construction</h1>
+        <nav>
+            <div>
+                <img src={% static "img/logoBlack.png" %} class="logo" alt="logo">
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href={% url "home" %}>Home</a>
+                <a href={% url "products" %}>Products</a>
+                <a href={% url "about" %}>About</a>
+                <a href="#contact">Contact</a>
+                <a href={% url "docs" %}>Docs</a>
+            {% if user.is_authenticated %}
+                <a href={% url "logout" %}>LogOut</a>
+            {% else %}
+                <a href={% url 'login' %}>LogIn</a>
+            {% endif %}
+            </div>
+            <div class="user-salute">
+                {% if user.is_authenticated %}
+                    <p>
+                    Hi {{ user.username }}!
+                    </p> 
+                {% else %}
+                    <p>You are not logged in</p>
+                {% endif %}
+            </div>
+            <div class="hamburger-menu">
+                <div class="ham-bar bar-top"></div>
+                <div class="ham-bar bar-mid"></div>
+                <div class="ham-bar bar-bottom"></div>
+            </div>
+            <div class="navbar-user">
+            {% if user.is_authenticated %}
+            <p>
+                    Hi {{ user.username }}!
+            </p> 
+            {% else %}
+                <p>You are not logged in</p>
+            {% endif %}
+            </div>
+        </nav>
+        <section class="d_holder">
+            <div class="price_d_holder">
+                <span class="price_card">
 
-   
+                </span>
+            </div>
+            <div class="comment_d_holder">
+                <h3 class="product_name">{{data.name}}</h3>
+                <span class="image_carrier">
+                    <img  class="product_image" src='{{data.image}}' alt="product picture">
+                </span>
+                <h4 class="comment_head">
+                    Comments
+                </h4>
+                    <div class="div_one">
+                        {% for comment in comments %}
+                        <span class="span_card">
+                            <section class="section_card ">
+                                <h4>{{comment.customer_id.first_name}}</h4>       <h6>{{comment.created_at}}</h6>
+                            </section>
+                            <p> 
+                                {{comment.comments}}
+                            </p>
+                        </span>
+                        {% endfor %} 
+                    </div>
+           
+                    <form method ="post" action="">
+                    {% csrf_token %}
+                    <!-- <label for="comments">product comments</label> -->
+                        <textarea  name="comments" rows="4" cols="50" placeholder="add comments">
+                    </textarea>
+                    {% for message in messages %}
+                       <span>{{message}}</span>
+                    {% endfor %} 
+                        <input type="submit"  value="submit">
+                    </form>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+  
+    <script src={% static 'js/index.js' %}></script>
 {% endblock %}
 {% block styles %}
     <link rel="stylesheet" href={% static "css/product_details.css" %}>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/255033cb2c.js" crossorigin="anonymous"></script>
+    <title>Products <details></details></title>
 {% endblock %}

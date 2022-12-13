@@ -51,85 +51,38 @@
     <section class="product">
         <h3 class="head-word">Available Products</h3>
         <div class="product-container">
-            <div class="card" id="beats">
-                <img src={% static "img/headphone2.jpg" %} alt="product picture">
-                <div class="text">
-                    <h3>Beats Headset</h3>
-                    <p>The 2022 beats by dre collab with 50 cent, the G-unit themed one of a kind headset, in the running for best..</p>
-                </div>
-                <div class="btn_holder">
-                    <a href={% url "productDetail" %} class="btn">
-                        view details
-                   </a> 
-                 </div>
-            </div>
-
-            <div class="card">
-                <img src={% static "img/landphone.jpg" %} alt="product picture">
-                <div class="text">
-                    <h3>Retro Spin Dial Phone</h3>
-                    <p>One for the timeless nostalgic feeling of a rotary dial, works as a modern intercomjustnwith the touch of..</p>                  
-                </div>
-                <div class="btn_holder">
-                   <a href={% url "login" %} class="btn">
-                        Log in or sign up to view details
-                   </a> 
-                </div>
-            </div>
-
-            <div class="card">
-                <img src={% static "img/pacman.jpg" %} alt="product picture">
-                <div class="text">
-                    <h3>PacMan Gameboy</h3>
-                    <p>A mod for PacMan, for the rans of arcade and portable gaming, one of the bet gifts out there..</p>                   
-                </div>
-                <div class="btn_holder">
-                    <a href={% url "login" %} class="btn">
-                         Log in or sign up to view details
-                    </a> 
-                 </div>
-            </div>
-
-            <div class="card">
-                <img src={% static "img/headphone.jpg" %} alt="product picture">
-                <div class="text">
-                    <h3>Sony MK-III's</h3>
-                    <p>With the advent of the Sony MK-IV's one would think the previeous generation would be killed but its still going..</p>                                   
-                </div>
-                <div class="btn_holder">
-                    <a href={% url "login" %} class="btn">
-                         Log in or sign up to view details
-                    </a> 
-                 </div>
-            </div>
-
-            <div class="card">
-                <img src={% static "img/iphone.jpg" %} alt="product picture">                
-                <div class="text">
-                <h3>Mag-Safe Pouch</h3>
-                <p>Mag-Safe Pouch for Apple airpods, airpods pro. A pocket size..</p>                  
-                </div>
-                <div class="btn_holder">
-                    <a href={% url "login" %} class="btn">
-                         Log in or sign up to view details
-                    </a> 
-                 </div>
-            </div>
-
-            <div class="card">
-                <img src={% static "img/google nest.jpg" %} alt="product picture">
-                <div class="text">
-                    <h3>Google Nest</h3>
-                    <p>Google Nest Speaker for your google home connectivity, Alexa integrated coming soon..</p>                   
-                </div>
-                <div class="btn_holder">
-                   <a href={% url "login" %} class="btn">
-                        Log in or sign up to view details
-                   </a> 
-                </div>
-            </div>
-
-        </div>
+            {% if user.is_authenticated %}
+                {% for product in products %}
+                    <div class="card" id="beats">
+                        <img src='{{product.image_url}}' alt="product picture">
+                        <div class="text">
+                            <h3>{{product.product_name}}</h3>
+                            <p>{{product.description}}</p>
+                        </div>
+                        <div class="btn_holder">
+                            <a href={% url "productDetail" product.id user.id %} class="btn">
+                                view details
+                        </a> 
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                {% for product in products%}  
+                    <div class="card">
+                        <img src='{{product.image_url}}' alt="product picture">
+                        <div class="text">
+                            <h3>{{product.product_name}}</h3>
+                            <p>{{product.description}}</p>
+                        </div>
+                        <div class="btn_holder">
+                        <a href={% url "login" %} class="btn">
+                                Log in or sign up to view details
+                        </a> 
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+       
     </section>
 
    <script src={% static 'js/index.js' %}></script>
@@ -141,7 +94,6 @@
 
 {% block styles %}
     <link rel="stylesheet" href={% static "css/products.css" %}>
-    <link rel="stylesheet" href="/css/products.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/255033cb2c.js" crossorigin="anonymous"></script>
     <title>Products</title>
