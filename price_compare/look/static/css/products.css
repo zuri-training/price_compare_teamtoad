@@ -61,61 +61,6 @@ nav {
   .user-salute{
     display: none;
   }
-/* header starts */
-
-/* .header-container{
-    padding: 0 1.5rem;
-}
-header{
-    display:flex;
-    justify-content: space-between;
-}
-.logo{
-    width: 35vw;
-}
-.menu, .menu nav{
-    display: flex;
-    justify-content: space-between;
-    width: 30vw;
-}
-.profile i{
-    border: 1px solid #726e6e;
-    border-radius: 50%;
-    padding: 0.5rem;
-    color: white;
-    background-color: rgba(128, 128, 128, 0.801);
-}
-
-.profile{
-    display: flex;
-    align-items: center;
-    width: 10vw;        
-}
-.logo img{
-    width: 90px;
-}
-header a{
-    text-decoration: none;
-    color: inherit;
-}
-
-.menu, .profile{
-    align-items: center;
-}
-
-
-nav a:hover{
-    border-bottom: 2px solid purple;
-}
-nav a:active{
-    color: red;
-}
-
-/* hamburger */
-/* .hamburger{
-    display: none;
-} */ */
-
 /* product card begins */
 .product{
     padding: 0 5%;
@@ -164,6 +109,8 @@ nav a:active{
 .text p{
     font-size: 13px;
     line-height: 18px;
+    overflow: scroll;
+    height: 3rem;
     /* height: 3rem; */
 }
 .btn_holder{
@@ -200,32 +147,6 @@ nav a:active{
     margin-left: 2.5rem;
 }
 
-/* .hamber{        
-    animation: mine;
-    animation-duration: 0.02s;
-}
-.clos{
-    animation: mines;
-    animation-duration: 0.02s;
-} */
-
-/* @keyframes mine{
-    0% {transform: rotate(15deg);}
-    25% {transform: rotate(30deg);}
-    50% {transform: rotate(60deg);}
-    75% {transform: rotate(75deg);}
-    100% {transform: rotate(90deg);}
-}
-
-@keyframes mines{
-    0% {transform: rotate(-15deg);}
-    25% {transform: rotate(-30deg);}
-    50% {transform: rotate(-60deg);}
-    75% {transform: rotate(-75deg);}
-    100% {transform: rotate(-90deg);}
-} */
-/* media queries */
-/* mobile */
 @media screen and (max-width: 1255px) {
     /* nav styling */
     nav {
@@ -304,7 +225,6 @@ nav a:active{
       height: 100vh;
       width: 55%;
       transition: right 0.5s;
-      /* background: #000509; */
       text-align: left;
       z-index: 2;
     }
@@ -348,56 +268,9 @@ nav a:active{
         line-height: 15px;
     }
 
-    /* .hamburger .fa-x{
-        /* display: none; */
-    /* } */
-    /* .hamburger{
-        color: rgba(128, 128, 128, 0.801);
-        display: block;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: right;
-        padding-left: 1.5rem;
-    }
-    .menu .nav_list{
-        display: none; 
-        /* display: flex; */
-        /* position: relative;*/
-        /* flex-direction: column;  */
-        /* flex-wrap: nowrap; */
-        
-    /* } */ */
-    /* .menu #nav_list a{
-        background: none;
-        line-height: 2.5;
-    }
-    
-    .menu #nav_list{
-       
-        position: fixed;
-        top: 7%;
-        left: 45%;
-        color: #f4f4f4;
-        padding: 0 1.5rem;
-        height: 40vh;
-        width: 20%;
-        transition: left 0.5s;
-        background: rgba(128, 128, 128, 0.801);
-        text-align: left;
-        z-index: 2;
-    } */
-    /* .menu{
-        /* width: 65vw; */
-        /* justify-content: flex-end; */
-    /* }
-    .logo img{
-        width: 70px;
-    }  */
     .btn{
         padding: .6rem .8rem;
         border: none;
-        margin-right: 1rem;
         font-size: 14px ;
     }
   }

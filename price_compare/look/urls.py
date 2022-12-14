@@ -9,7 +9,6 @@ urlpatterns = [
     path('logoutUser/', LogoutUser, name="logout"),
     path('products/', Products, name="products"),
     path('productDetail/<int:id>/', ProductDetail, name="productDetail"),
-    path('about/', About, name="about"),
     path('docs/', Documentation, name="docs")
     
 ]

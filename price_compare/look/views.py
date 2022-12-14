@@ -56,11 +56,7 @@ def Index(request):
 def Products (request):
     products=Product.objects.all()
     context={"products":products }
-    return render(request, "pages/products.html",context)
-
-@login_required(login_url='login')
-def About (request):
-    return render(request, "pages/about.html")  
+    return render(request, "pages/products.html",context) 
 
 
 @login_required(login_url='login')
@@ -142,11 +138,9 @@ def ProductDetail (request,id):
                 comment=Comments(comments=comment_plus,customer_id=customers, product_id=duct)
                 comment.save()
                 messages.success(request, "comments successfully added")
-                comment_plus.clean()
+                comment.clean()
 
     context={"data":duck, "comments":user_comments}
     return render(request, "pages/productDetail.html",context) 
 
-@login_required(login_url='login')
-def Profile (request):
-    return render(request, "pages/profile.html")
+

@@ -162,7 +162,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 20vh;
+  height: 230px;
   margin-top: 3rem;
   margin-bottom: 6rem;
   width: 85%;
@@ -179,9 +179,13 @@ textarea{
   color: #000509;
 }
 
-textarea ::placeholder{
-    display: flex;
+form textarea::placeholder{
+    font-weight: bold;
+    opacity: 100%;
+    color: red;
+    margin-left: 2px;
 }
+
 
 .btn-case{
   display: flex;

@@ -8,8 +8,6 @@
             <div class="nav-links" id="nav-links">
                 <a href={% url "home" %}>Home</a>
                 <a href={% url "products" %}>Products</a>
-                <a href={% url "about" %}>About</a>
-                <a href="#contact">Contact</a>
                 <a href={% url "docs" %}>Docs</a>
             {% if user.is_authenticated %}
                 <a href={% url "logout" %}>LogOut</a>
@@ -162,16 +160,15 @@
                         </span>
                         {% endfor %} 
                     </div>
-           
                     <form method ="post" action="">
                     {% csrf_token %}
-                        <textarea  name="comments" rows="4" cols="50" placeholder="comments">
+                        <textarea  name="comments" type="text" placeholder="comments">
                     </textarea>
                     {% for message in messages %}
                        <span>{{message}}</span>
                     {% endfor %} 
                         <span class="btn-case">
-                            <input class="btn_comment" onclick="this.value=''" type="submit"  value="COMMENT">
+                            <input class="btn_comment" onclick="this.value= '' " type="submit"  value="COMMENT">
                         </span>
                         
                     </form>
