@@ -8,8 +8,7 @@ urlpatterns = [
     path('signup/', SignUp, name="signup" ),
     path('logoutUser/', LogoutUser, name="logout"),
     path('products/', Products, name="products"),
-    path('productDetail/<int:id>/<int:user_id>/', ProductDetail, name="productDetail"),
-    path('about/', About, name="about"),
+    path('productDetail/<int:id>/', ProductDetail, name="productDetail"),
     path('docs/', Documentation, name="docs")
     
 ]
