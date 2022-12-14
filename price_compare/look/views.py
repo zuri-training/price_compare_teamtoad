@@ -80,6 +80,9 @@ def ProductDetail (request,id, user_id):
     product_kon=duct.url_konga
     product_jumia=duct.url_jumia
     duck["name"]=duct.product_name
+    duck["konga"]=duct.url_konga
+    duck["jumia"]=duct.url_jumia
+    duck["kara"]=duct.url_kara
     try:
         ka_result=requests.get(product_kara) # type: ignore #i
         doc=BeautifulSoup(ka_result.text,"html.parser")
@@ -139,7 +142,9 @@ def ProductDetail (request,id, user_id):
                 comment=Comments(comments=comment_plus,customer_id=customers, product_id=duct)
                 comment.save()
                 messages.success(request, "comments successfully added")
-        
+                comment = ''
+                comment_plus = ""
+             
     context={"data":duck, "comments":user_comments}
     return render(request, "pages/productDetail.html",context) 
 
