@@ -54,6 +54,7 @@ def Index(request):
 
 
 def Products (request):
+    
     products=Product.objects.all()
     context={"products":products }
     return render(request, "pages/products.html",context) 
@@ -67,8 +68,9 @@ def Documentation (request):
 @login_required(login_url='login')
 def ProductDetail (request,id):
     duck={}
-
+    
     duct=Product.objects.get(id=id)
+
     user_comments=Comments.objects.filter(product_id=id)
     customers=UserPlus.objects.get(username=request.user.username)
 
@@ -145,3 +147,11 @@ def ProductDetail (request,id):
     return render(request, "pages/productDetail.html",context) 
 
 
+def handle_not_found(request,exception):
+    return render(request, "errors/error404.html")
+
+def handle_bad_request(request,exception):
+    return render(request, "errors/error400.html")
+
+def handle_server_error(request):
+    return render(request, "errors/error500.html")

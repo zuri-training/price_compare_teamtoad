@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 # from django.views.generic.base import TemplateView
-
+# from look.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("look.urls")),      
 ]
+
+handler400="look.views.handle_bad_request"
+handler404="look.views.handle_not_found"
+handler500="look.views.handle_server_error"
