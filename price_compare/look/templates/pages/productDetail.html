@@ -1,188 +1,173 @@
-{% extends "../layouts/base.html" %}
-{% load static %}
-{% block content %}
-        <nav>
-            <div>
-                <img src={% static "img/logoBlack.png" %} class="logo" alt="logo">
-            </div>
-            <div class="nav-links" id="nav-links">
-                <a href={% url "home" %}>Home</a>
-                <a href={% url "products" %}>Products</a>
-                <a href={% url "docs" %}>Docs</a>
-            {% if user.is_authenticated %}
-                <a href={% url "logout" %}>LogOut</a>
-            {% else %}
-                <a href={% url 'login' %}>LogIn</a>
-            {% endif %}
-            </div>
-            <div class="user-salute">
-                {% if user.is_authenticated %}
-                    <p>
-                    Hi {{ user.username }}!
-                    </p> 
-                {% else %}
-                    <p>You are not logged in</p>
-                {% endif %}
-            </div>
-            <div class="hamburger-menu">
-                <div class="ham-bar bar-top"></div>
-                <div class="ham-bar bar-mid"></div>
-                <div class="ham-bar bar-bottom"></div>
-            </div>
-            <div class="navbar-user">
-            {% if user.is_authenticated %}
-            <p>
-                    Hi {{ user.username }}!
-            </p> 
-            {% else %}
-                <p>You are not logged in</p>
-            {% endif %}
-            </div>
-        </nav>
-        <section class="d_holder">
-            <section class="price_d_holder"> 
-        
-                 <!-- product display -->
-            
-            
-                <h3 class="pricer-headed">Price Sources</h3>
-
-                <div class="vendor">               
-                    
-                    <div class="text">
-                        <span>
-                            <p>Platform Name:</p>
-                            <p class="plus-name">Konga </p>
-                        </span>
-                        
-                       <span>
-                            <p>Konga Pirce</p>
-                            <p class="plus">{{data.priceKonga}} Naira</p>
-                       </span>
-                       <a class="btn-card" href={{data.konga}} target="_blank">Purchase</a>
-                    </div>
-
-                    <div class="vendor-logo">
-                        <img src="data:image/png;base64,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" alt="">
-                    </div>
-                
-                </div>
-                <div class="vendor">               
-                    
-                    <div class="text">
-                        <span>
-                            <p>Platform Name:</p>
-                            <p class="plus-name">Jumia </p>
-                        </span>
-                        
-                       <span>
-                            <p>Jumia Pirce</p>
-                            <p class="plus">{{data.priceJumia}} Naira</p>
-                       </span>
-                       <a class="btn-card" href={{data.jumia}} target="_blank">Purchase</a>
-                    </div>
-
-                    <div class="vendor-logo">
-                        <img src="data:image/png;base64,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" alt="">
-                    </div>
-                
-                </div>
-                <div class="vendor">               
-                    
-                    <div class="text">
-                        <span>
-                            <p>Platform Name:</p>
-                            <p class="plus-name">Kara </p>
-                        </span>
-                        
-                       <span>
-                            <p>Kara Pirce</p>
-                            <p class="plus">{{data.priceKara}} Naira</p>
-                       </span>
-                       <a class="btn-card" href={{data.kara}} target="_blank">Purchase</a>
-                    </div>
-
-                    <div class="vendor-logo">
-                        <img src={% static "img/kara.svg" %} alt="">
-                    </div>
-                
-                </div>
-                    
-               <div class="display-none">
-                <h4 class="comment_head">
-                    Comments
-                </h4>
-                    <div class="div_one">
-                        {% for comment in comments %}
-                        <span class="span_card">
-                            <section class="section_card ">
-                                <h4>{{comment.customer_id.first_name}}</h4>       <h6>{{comment.created_at}}</h6>
-                            </section>
-                            <p> 
-                                {{comment.comments}}
-                            </p>
-                        </span>
-                        {% endfor %} 
-                    </div>
-           
-                    <form method ="post" action="">
-                    {% csrf_token %}
-                        <textarea  name="comments" rows="4" cols="50" placeholder="comments"></textarea>
-                    {% for message in messages %}
-                       <span class="message">{{message}}</span>
-                    {% endfor %} 
-                        <span class="btn-case">
-                            <input class="btn_comment"  onclick="this.value= '' " type="submit"  value="COMMENT">
-                        </span>
-                        
-                    </form>
-               </div>
-            </section>
-            <div class="comment_d_holder">
-                <h3 class="product_name">{{data.name}}</h3>
-                <span class="image_carrier">
-                    <img  class="product_image" src='{{data.image}}' alt="product picture">
-                </span>
-                <div class="mob-display-none">
-                    <h4 class="comment_head">
-                    Comments
-                </h4>
-                    <div class="div_one">
-                        {% for comment in comments %}
-                        <span class="span_card">
-                            <section class="section_card ">
-                                <h4>{{comment.customer_id.first_name}}</h4>       <h6>{{comment.created_at}}</h6>
-                            </section>
-                            <p> 
-                                {{comment.comments}}
-                            </p>
-                        </span>
-                        {% endfor %} 
-                    </div>
-                    <form method ="post" action="">
-                    {% csrf_token %}
-                        <textarea  name="comments" type="text" placeholder= "comments "></textarea>
-                    {% for message in messages %}
-                       <span id="my_message">{{message}}</span>
-                    {% endfor %} 
-                        <span class="btn-case">
-                            <input class="btn_comment" onclick="this.value= '' " type="submit"  value="COMMENT">
-                        </span>
-                        
-                    </form>
-                </div>
-                
-                </div>
-
-        </section>
-
-        <script src={% static 'js/product.js' %}></script>
-        <script src={% static 'js/product_details.js' %}></script>
-    <script src={% static 'js/index.js' %}></script>
-{% endblock %}
-{% block styles %}
-    <link rel="stylesheet" href={% static "css/product_details.css" %}>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/productDetails.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/255033cb2c.js" crossorigin="anonymous"></script>
-    <title>Products <details></details></title>
-{% endblock %}
+    <script src="https://smtpjs.com/v3/smtp.js">  </script>
+    <title>Products</title>
+</head>
+<body>
+
+    <section class="header-container border-shadow ">
+        <header>
+            <div class="logo">
+                <img src="/images/logo.jpg"  alt="logo">
+            </div>
+            <div class="menu">                
+                <nav class="nav_list" id="nav_list">                  
+                    <a href="/index.html">Home</a>
+                    <a href="#">Products</a>
+                    <a href="About.html">About</a>
+                    <a href="#contact">contact</a>
+                    <a href="Docs.html">Docs</a>
+                </nav>  
+            </div>           
+            <div class="hamburger">
+                <i class="fa-solid fa-bars fa-2x"></i>
+                <i class="fa-solid fa-x  fa-2x"></i>
+            </div>            
+        </header>
+    </section>
+    
+    <!-- product display -->
+    <section class="productDetails">
+        <div class="displayProduct">
+            <h3>Iphone 13 Pro Max- 256 ROM- 6GB RAM- Red</h3>
+            <img src="/images/headphone2.jpg" alt="product picture">
+        </div>
+        <div class="related-products">
+            <h3>Price Sources</h3>
+            <div class="vendor">               
+                
+                <div class="text">
+                    <p>Network Technology</p>
+                    <p>GSM/HSPA/LTE</p>
+                    <p>Model SM-A135F/</p>
+                    <p>DS.....</p>
+                    <p>134,999.99 Naira</p>
+                    
+                    <button class="btn" data-purchase="headset">Purchase</button>
+                </div>
+
+                <div class="vendor-logo">
+                    <img src="data:image/png;base64,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" alt="">
+                </div>
+            
+            </div>
+
+            <div class="vendor">               
+                
+                <div class="text">
+                    <p>Network Technology</p>
+                    <p>GSM/HSPA/LTE</p>
+                    <p>Model SM-A135F/</p>
+                    <p>DS.....</p>
+                    <p>135,999.99 Naira</p>
+                    
+                    <button class="btn" data-purchase="headset">Purchase</button>
+                </div>
+
+                <div class="vendor-logo">
+                    <img src="data:image/png;base64,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" alt="">
+                </div>
+            
+            </div>
+
+            <div class="vendor">               
+                
+                <div class="text">
+                    <p>Network Technology</p>
+                    <p>GSM/HSPA/LTE</p>
+                    <p>Model SM-A135F/</p>
+                    <p>DS.....</p>
+                    <p>132,999.99 Naira</p>
+                    
+                    <button class="btn" data-purchase="headset">Purchase</button>
+                </div>
+
+                <div class="vendor-logo">
+                    <img src="data:image/png;base64,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" alt="">
+                </div>
+            
+            </div>
+
+           
+
+        </div>
+        
+        <div class="productDetails-container">
+            <div class="displayProduct-show">
+                <h3>Iphone 13 Pro Max- 256 ROM- 6GB RAM- Red</h3>
+                <img src="/images/headphone2.jpg" alt="product picture">
+            </div>
+            
+            <div class="card-details">             
+                    <div class="user-comment">
+                        <h3>Comments</h3>
+                        <ul id="list">
+                            <li class="comment-item">
+                                <div class="comment-head">
+                                    <p class="comment-name">ALIU</p>
+                                    <p class="comment-date">1-12-2022</p>
+                                </div>
+                                <p class="comment-body">Hi, I love the Price comparison on this application. I have looking for something like this for a while</p>
+
+                            </li>
+
+                            <li class="comment-item">
+                                <div class="comment-head">
+                                    <p class="comment-name">JAMES</p>
+                                    <p class="comment-date">1-12-2022</p>
+                                </div>
+                                <p class="comment-body">Hi, I love the Price comparison on this application. I have looking for something like this for a while</p>
+
+                            </li>
+
+                            <li class="comment-item">
+                                <div class="comment-head">
+                                    <p class="comment-name">SOLA</p>
+                                    <p class="comment-date">2-12-2022</p>
+                                </div>
+                                <p class="comment-body">Hi, I love the Price comparison on this application. I have looking for something like this for a while</p>
+
+                            </li>
+                        </ul>
+                    <textarea name="comment" id="comment" placeholder="Comment.." cols="30" rows="3"></textarea>
+                    <button class="btn" data-comment>COMMENT</button>
+                    <div class="share">                        
+                        <select name="shareMedia" id="shareMedia" class="shareMedia">
+                            <option value="#">Share via: </option>
+                            <option value="fbk">Facebook</option>
+                            <option value="wthp">Whatsapp</option>
+                            <option value="email">E-mail</option>
+                        </select>
+
+                        
+                        <button class="btn" data-share>SHARE</button>
+                        
+                    </div>
+                    <button class="btn" data-logout="logout">LOGOUT</button>
+                    <div id="mail-share">
+                        <a href="mailto:?subject=Awesome Price Comparision App&amp;body=Check out this site http://hoyindamola.pythonanywhere.com."
+                    title="Share by Email" id="mailSh">click to share via E-mail</a>
+                    </div>
+                    
+                    </div>
+                    
+                </div>
+            
+            <!-- anchor arrow -->
+            
+        </div>
+    </section>
+
+    <script src="/js/productDetails.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
