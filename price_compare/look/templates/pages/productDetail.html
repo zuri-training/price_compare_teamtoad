@@ -183,12 +183,12 @@
                     </select>
 
                     
-                    <button class="btn" data-share>SHARE</button>
+                    <button id="share-btn" >SHARE</button>
                     
                 </div>
-                <button class="btn" data-logout="logout">LOGOUT</button>
+
                 <div id="mail-share">
-                    <a href="mailto:?subject=Awesome Price Comparision App&amp;body=Check out this site http://hoyindamola.pythonanywhere.com."
+                    <a href="mailto:?subject=Awesome Price Comparision App&amp;body=Check out this site"
                 title="Share by Email" id="mailSh">click to share via E-mail</a>
                 </div>
                 
@@ -198,7 +198,7 @@
 
         </section>
 
-        <script src={% static 'js/product.js' %}></script>
+        <!-- <script src={% static 'js/product.js' %}></script> -->
         <script src={% static 'js/product_details.js' %}></script>
     <script src={% static 'js/index.js' %}></script>
 {% endblock %}

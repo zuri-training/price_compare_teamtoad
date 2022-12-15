@@ -308,7 +308,10 @@ form textarea::placeholder{
   height: 200px;
 }
 
-
+.share{
+  position: fixed;
+  bottom: 0;
+}
 
 .shareMedia :focus, .shareMedia :hover{
   border: none;
@@ -329,8 +332,6 @@ button[data-share]{
 #mail-share{
   display: none;
 }
-
-
 
 
   /* media queries */
@@ -548,3 +549,7 @@ button[data-share]{
         margin-top: 2rem;
       }
 }
+
+/* NEW CODE */
+
+
