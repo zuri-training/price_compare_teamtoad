@@ -310,6 +310,28 @@ form textarea::placeholder{
 
 
 
+.shareMedia :focus, .shareMedia :hover{
+  border: none;
+}
+button[data-share]{
+  padding: 0.5rem;
+}
+.shareMedia{
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--light-primary);
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
+
+#mail-share{
+  display: none;
+}
+
+
+
 
   /* media queries */
 /* mobile */
