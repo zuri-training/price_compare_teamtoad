@@ -1,0 +1,58 @@
+{% extends "../layouts/base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+<section class="error-msg">
+    <div>
+        <img src={% static "img/error400.png" %} alt="" class="error-img">
+    </div>
+    <div class="error-text">
+        <h1>Error 400</h1>
+        <h3>Bad Request</h3>
+        <a class="herobtn" href={% url "home" %}>Home</a>
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+    <link rel="stylesheet" href={% static "css/error.css" %}>
+    <title>Error400</title>
+{% endblock %}
+
+
+<body>
+    <!-- Nav Section -->
+    <nav>
+        <div>
+            <img src="img/logo-b&w.png" class="logo" alt="logo">
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href={% url "home" %}>Home</a>
+            <a href={% url "products" %}>Products</a>
+            <a href={% url "about" %}>About</a>
+            <a href="#contact">Contact</a>
+            <a href={% url "docs" %}>Docs</a>
+        </div>
+        <div>
+            <img src="img/avatar.png" alt="" class="avatar">
+        </div>
+        <div class="hamburger-menu">
+            <div class="ham-bar bar-top"></div>
+            <div class="ham-bar bar-mid"></div>
+            <div class="ham-bar bar-bottom"></div>
+        </div>
+    </nav>
+
+    <!-- Error Msg Section -->
+
+
+    <script src="index.js"></script>
+</body>
+</html>

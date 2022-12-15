@@ -1,0 +1,29 @@
+
+{% extends "../layouts/base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+<section class="error-msg">
+    <div>
+        <img src={%  static "img/error500.png" %} alt="" class="error-img">
+    </div>
+    <div class="error-text">
+        <h1>Error 500</h1>
+        <h3>Internet Server Error</h3>
+        <a class="herobtn" href={% url "home" %}>Home</a>
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+    <link rel="stylesheet" href={% static "css/error.css" %}>
+    <title>Error500</title>
+{% endblock %}
+
