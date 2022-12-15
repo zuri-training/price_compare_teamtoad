@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+/* nav styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo {
+  height: 80px;
+  width: 200px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  padding: 0 30px;
+  color: #ccd1d5;
+  /* color: #2C3F4E; */
+}
+
+.nav-links a:hover {
+  color: #d7263d;
+}
+
+nav .avatar {
+  width: 40px;
+  height: 40px;
+}
+
+/* error msg section syling */
+.error-msg {
+  width: 90%;
+  height: 500px;
+  margin: 0 50px;
+  background: rgba(169, 235, 255, 0.1);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-text {
+  margin-left: 100px;
+}
+
+.error-img {
+  width: 100%;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 600%;
+  line-height: 112px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 150%;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.previous {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 87.5%;
+  line-height: 16px;
+  color: #017ECD;
+}
+
+.previous:hover {
+  color: #017fcda1;
+}
+
+.herobtn {
+  padding: 10px;
+  /* width: 30%;
+    height: 43px; */
+  width: 315px;
+  height: 43px;
+  background: #017ecd;
+  border-radius: 8px;
+  border: 2px solid #017ecd;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #fef7f7;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.herobtn:hover {
+  background-color: transparent;
+  cursor: pointer;
+  color: #017ecd;
+  border: 2px solid #017ecd;
+}
+
+@media screen and (max-width: 1020px) {
+  .nav-links a {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .error-img {
+    width: 100%;
+  }
+
+  .error-text {
+    margin-left: 40px;
+  }
+
+  .error-img {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 400%;
+  }
+
+  .herobtn {
+    width: 250px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .logo {
+    height: 40px;
+    width: 100px;
+  }
+
+  .hamburger-menu {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 2;
+  }
+
+  .ham-bar {
+    width: 70%;
+    height: 4px;
+    background-color: #017ecd;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s, opacity 0.8s, top 0.6s;
+  }
+
+  .bar-top {
+    top: 25%;
+  }
+
+  .bar-bottom {
+    top: 75%;
+  }
+
+  .hamburger-menu.active .bar-top {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+  }
+
+  .hamburger-menu.active .bar-mid {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar-bottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+  }
+
+  #nav-links {
+    position: fixed;
+    top: 0;
+    right: -75%;
+    height: 100vh;
+    width: 55%;
+    transition: right 0.5s;
+    background: #000509;
+    text-align: left;
+    z-index: 2;
+  }
+
+  #nav-links a {
+    padding: 50px 500px 0 20px;
+  }
+
+  #nav-links.active {
+    right: 0;
+  }
+
+  #nav-links a {
+    display: block;
+  }
+
+  .avatar {
+    margin-left: 50px;
+  }
+
+  .error-msg {
+    width: 90%;
+    height: 600px;
+    margin: 0 20px;
+    flex-direction: column;
+  }
+
+  .error-img {
+    width: 60%;
+    margin: 20px 65px 20px;
+  }
+
+  .error-text {
+    margin-left: 10px;
+  }
+}
