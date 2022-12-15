@@ -148,10 +148,10 @@ def ProductDetail (request,id):
 
 
 def handle_not_found(request,exception):
-    return render(request, "pages/index.html")
+    return render(request, "errors/error404.html")
 
 def handle_bad_request(request,exception):
-    return render(request, "pages/index.html")
+    return render(request, "errors/error400.html")
 
 def handle_server_error(request):
-    return render(request, "pages/index.html")
+    return render(request, "errors/error500.html")
