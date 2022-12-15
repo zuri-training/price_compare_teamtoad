@@ -308,7 +308,30 @@ form textarea::placeholder{
   height: 200px;
 }
 
+.share{
+  position: fixed;
+  bottom: 0;
+}
 
+.shareMedia :focus, .shareMedia :hover{
+  border: none;
+}
+button[data-share]{
+  padding: 0.5rem;
+}
+.shareMedia{
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--light-primary);
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
+
+#mail-share{
+  display: none;
+}
 
 
   /* media queries */
@@ -526,3 +549,7 @@ form textarea::placeholder{
         margin-top: 2rem;
       }
 }
+
+/* NEW CODE */
+
+

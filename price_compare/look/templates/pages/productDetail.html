@@ -173,10 +173,32 @@
                 </div>
                 
                 </div>
+                
+                <div class="share">                        
+                    <select name="shareMedia" id="shareMedia" class="shareMedia">
+                        <option value="#">Share via: </option>
+                        <option value="fbk">Facebook</option>
+                        <option value="wthp">Whatsapp</option>
+                        <option value="email">E-mail</option>
+                    </select>
+
+                    
+                    <button id="share-btn" >SHARE</button>
+                    
+                </div>
+
+                <div id="mail-share">
+                    <a href="mailto:?subject=Awesome Price Comparision App&amp;body=Check out this site"
+                title="Share by Email" id="mailSh">click to share via E-mail</a>
+                </div>
+                
+                </div>
+                
+            </div>
 
         </section>
 
-        <script src={% static 'js/product.js' %}></script>
+        <!-- <script src={% static 'js/product.js' %}></script> -->
         <script src={% static 'js/product_details.js' %}></script>
     <script src={% static 'js/index.js' %}></script>
 {% endblock %}
