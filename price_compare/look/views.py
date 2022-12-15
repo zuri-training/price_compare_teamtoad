@@ -59,7 +59,7 @@ def Products (request):
     return render(request, "pages/products.html",context) 
 
 
-@login_required(login_url='login')
+
 def Documentation (request):
     return render(request, "pages/docs.html")
 
@@ -130,9 +130,10 @@ def ProductDetail (request,id):
     
     if request.method == "POST":
         comment_plus=request.POST.get('comments')
-        while comment_plus == "":
+        while comment_plus == "" or None:
             messages.info(request, "comments cannot be empty")
             break
+            
         else:
             if comment_plus != "":
                 comment=Comments(comments=comment_plus,customer_id=customers, product_id=duct)

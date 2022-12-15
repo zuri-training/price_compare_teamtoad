@@ -127,13 +127,12 @@
            
                     <form method ="post" action="">
                     {% csrf_token %}
-                        <textarea  name="comments" rows="4" cols="50" placeholder="comments">
-                    </textarea>
+                        <textarea  name="comments" rows="4" cols="50" placeholder="comments"></textarea>
                     {% for message in messages %}
                        <span class="message">{{message}}</span>
                     {% endfor %} 
                         <span class="btn-case">
-                            <input class="btn_comment" onclick="" type="submit"  value="COMMENT">
+                            <input class="btn_comment"  onclick="this.value= '' " type="submit"  value="COMMENT">
                         </span>
                         
                     </form>
@@ -162,10 +161,9 @@
                     </div>
                     <form method ="post" action="">
                     {% csrf_token %}
-                        <textarea  name="comments" type="text" placeholder="comments">
-                    </textarea>
+                        <textarea  name="comments" type="text" placeholder= "comments "></textarea>
                     {% for message in messages %}
-                       <span>{{message}}</span>
+                       <span id="my_message">{{message}}</span>
                     {% endfor %} 
                         <span class="btn-case">
                             <input class="btn_comment" onclick="this.value= '' " type="submit"  value="COMMENT">
@@ -177,8 +175,9 @@
                 </div>
 
         </section>
+
         <script src={% static 'js/product.js' %}></script>
-        <script src={% static 'js/main.js' %}></script>
+        <script src={% static 'js/product_details.js' %}></script>
     <script src={% static 'js/index.js' %}></script>
 {% endblock %}
 {% block styles %}
