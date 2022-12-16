@@ -36,6 +36,12 @@
                         {{form.password2}}
                     </div>
                     <div class="inputBx">
+                        {{form.errors}}
+                        {% for message in messages %}
+                            <span>{{message}}</span>
+                        {% endfor %} 
+                    </div>
+                    <div class="inputBx">
                         <input type="submit" value="Sign up">
                     </div>
                     <div class="inputBx">

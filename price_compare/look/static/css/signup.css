@@ -102,6 +102,14 @@ section .contentBx .formBx .inputBx p a{
     text-decoration: none;
     color:  #0197f6;
 }
+
+.errorlist{
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    color: #a47786;
+
+}
+
 @media(max-width: 786px){
     section .imgBx{
         position: absolute;
