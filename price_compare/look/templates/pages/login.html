@@ -18,10 +18,13 @@
                         <label for="password">password</label>
                         <input type="password" name="password" placeholder="password">
                     </div>
-                    {{form.errors}}
-                    {% for message in messages %}
-                        <span>{{message}}</span>
-                    {% endfor %} 
+                    <div class="inputBx">
+                        {{form.errors}}
+                       
+                        {% for message in messages %}
+                            <span>{{message}}</span>
+                        {% endfor %} 
+                    </div>
                     <div class="inputBx">
                         <input type="submit" value="Login">
                     </div>

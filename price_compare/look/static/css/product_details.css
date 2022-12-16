@@ -182,7 +182,7 @@ textarea{
 form textarea::placeholder{
     font-weight: bold;
     opacity: 100%;
-    color: red;
+    color: var(--dark-color);
     margin-left: 2px;
 }
 
